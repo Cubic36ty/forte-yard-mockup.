@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Forte Yard Montessori Primary School — Mockup</title>
+<meta name="description" content="Forte Yard Montessori Primary School — demo website + school management system mockup by Cubic36ty" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#2b6cb0; /* blue */
+    --accent-2:#f6ad55; /* orange */
+    --muted:#64748b;
+    --card:#ffffff;
+    --bg:#f7fafc;
+    --shadow:0 8px 30px rgba(11,15,30,0.06);
+    --radius:12px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  }
+  *{box-sizing:border-box}
+  body { margin:0; background:var(--bg); color:#0f1724; line-height:1.5; }
+  .container{max-width:1100px;margin:0 auto;padding:28px}
+  /* nav */
+  header{position:sticky;top:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(2,6,23,0.06);z-index:40}
+  nav.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 28px;max-width:1100px;margin:0 auto}
+  .brand{display:flex;gap:12px;align-items:center}
+  .brand h1{margin:0;font-size:18px;color:var(--accent)}
+  .menu{display:flex;gap:18px;align-items:center}
+  .menu a{color:#0f1724;text-decoration:none;font-weight:600}
+  .cta{background:var(--accent);color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+  /* hero */
+  .hero{height:64vh;min-height:420px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;color:#fff;text-align:center}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:
+    linear-gradient(180deg, rgba(2,6,23,0.45), rgba(2,6,23,0.25)),
+    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    z-index:0}
+  .hero .inner{position:relative;z-index:2;padding:20px;max-width:920px}
+  .hero h2{font-size:clamp(28px,5vw,44px);margin:0 0 10px;letter-spacing:0.2px}
+  .hero p{margin:0 0 16px;color:rgba(255,255,255,0.95);font-size:1.05rem}
+  .hero .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.ghost{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.16)}
+  /* sections */
+  section{padding:56px 20px}
+  h3{margin-top:0;color:#0f1724}
+  .split{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
+  .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .program{padding:16px;border-radius:10px;background:#fff;box-shadow:0 6px 18px rgba(11,15,30,0.04)}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .gallery img{width:100%;height:130px;object-fit:cover;border-radius:8px}
+  /* forms */
+  label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+  input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-bottom:10px}
+  textarea{min-height:100px}
+  .muted{color:var(--muted);font-size:14px}
+  /* SMS demo */
+  .sms-grid{display:grid;grid-template-columns:280px 1fr;gap:18px}
+  .sms-nav button{display:block;width:100%;padding:12px;margin-bottom:10px;border-radius:8px;border:1px solid #eef2f7;background:#fff;text-align:left;cursor:pointer}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  th,td{padding:10px;border-bottom:1px solid #f1f5f9;text-align:left;font-size:14px}
+  th{background:#f8fafc}
+  .small{font-size:13px;color:var(--muted)}
+  /* footer */
+  footer{background:#0b1220;color:#fff;padding:26px;text-align:center}
+  @media (max-width:920px){.split{grid-template-columns:1fr}.hero{height:auto;padding:44px 0}.sms-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="brand" aria-hidden="false">
+      <!-- Replace with your logo if available -->
+      <img src="https://via.placeholder.com/56x56.png?text=FY" alt="Forte Yard logo" style="height:46px;border-radius:8px"/>
+      <div>
+        <h1>Forte Yard Montessori</h1>
+        <div class="small muted">Primary School — Cubic36ty Demo</div>
+      </div>
+    </div>
+
+    <div class="menu" role="navigation" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#sms">SMS Demo</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="#admissions" style="margin-left:12px">Enroll Now</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home" aria-label="Forte Yard hero">
+  <div class="inner">
+    <h2>Forte Yard Montessori Primary School</h2>
+    <p>Nurturing young minds with Montessori methods — excellence in early education, creativity, and character.</p>
+    <div class="actions">
+      <button class="btn primary" onclick="document.getElementById('admissions-form').scrollIntoView({behavior:'smooth'})">Apply Online</button>
+      <button class="btn ghost" onclick="document.getElementById('sms').scrollIntoView({behavior:'smooth'})">View SMS Demo</button>
+    </div>
+  </div>
+</section>
+
+<main class="container" id="main">
+
+  <!-- About -->
+  <section id="about">
+    <div class="split">
+      <div>
+        <h3>About Forte Yard Montessori</h3>
+        <p class="muted">Forte Yard Montessori Primary School blends Montessori pedagogy with a structured curriculum to prepare children for lifelong learning. We focus on hands-on activities, emotional development, and strong foundations in literacy and numeracy.</p>
+        <ul>
+          <li>Qualified & caring teachers</li>
+          <li>Child-centered learning environments</li>
+          <li>Safe campus with extracurricular activities</li>
+        </ul>
+      </div>
+      <div>
+        <div class="card">
+          <h4>Quick Facts</h4>
+          <p class="small"><strong>Location:</strong> [Insert address]</p>
+          <p class="small"><strong>Contact:</strong> +234 xxx xxx xxxx</p>
+          <p class="small"><strong>Age Group:</strong> 2 - 11 years</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs">
+    <h3>Programs</h3>
+    <div class="cards" role="list">
+      <div class="program" role="listitem">
+        <h4>Montessori Early Years</h4>
+        <p class="muted">Hands-on activities for practical life, sensorial development, language & early maths.</p>
+      </div>
+      <div class="program" role="listitem">
+        <h4>Primary Curriculum</h4>
+        <p class="muted">Balanced curriculum with literacy, numeracy, science, and creative arts.</p>
+      </div>
+      <div class="program" role="listitem">
+        <h4>After School Clubs</h4>
+        <p class="muted">Sports, music, drama and coding clubs to build skills and confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions -->
+  <section id="admissions">
+    <h3>Admissions — Apply Online</h3>
+    <div class="card" id="admissions-form">
+      <form id="admissionForm" onsubmit="submitAdmission(event)">
+        <label for="childName">Child's Full Name</label>
+        <input id="childName" required placeholder="e.g., Ada Okonkwo"/>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required />
+
+        <label for="classSelect">Applying for Class</label>
+        <select id="classSelect">
+          <option>Montessori</option>
+          <option>Primary 1</option>
+          <option>Primary 2</option>
+        </select>
+
+        <label for="guardian">Guardian Name</label>
+        <input id="guardian" required placeholder="Parent/Guardian full name" />
+
+        <label for="phone">Contact Phone / Email</label>
+        <input id="phone" required placeholder="Phone or email" />
+
+        <label for="notes">Any Notes (allergies, needs)</label>
+        <textarea id="notes" placeholder="Optional"></textarea>
+
+        <div style="display:flex;gap:12px">
+          <button class="btn primary" type="submit">Submit Application</button>
+          <button class="btn ghost" type="button" onclick="resetForm()">Reset</button>
+        </div>
+        <p class="small" style="margin-top:10px">This demo stores application data in your browser (mock). For real deployment it will be saved on the server.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- SMS Demo -->
+  <section id="sms">
+    <h3>School Management System — Demo</h3>
+    <p class="muted">Use the demo admin to view and manage students, attendance, and results. (Front-end mock backed by localStorage)</p>
+
+    <div class="sms-grid">
+      <!-- left nav -->
+      <div class="sms-nav card" aria-label="SMS navigation">
+        <button onclick="smsShow('students')">Students</button>
+        <button onclick="smsShow('add')">Add Student</button>
+        <button onclick="smsShow('attendance')">Attendance</button>
+        <button onclick="smsShow('results')">Results</button>
+        <hr />
+        <div style="margin-top:8px">
+          <div class="small">Admin Login (demo)</div>
+          <button class="btn primary" onclick="demoLogin()">Login as Admin</button>
+          <div class="small" style="margin-top:8px">Use password: <strong>demo123</strong></div>
+        </div>
+      </div>
+
+      <!-- right content -->
+      <div id="smsContent">
+        <!-- students table -->
+        <div id="studentsView" style="display:none" class="card">
+          <h4>Students</h4>
+          <table id="studentsTable" role="table" aria-label="Students table">
+            <thead><tr><th>Adm No</th><th>Name</th><th>Class</th><th>Phone</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <!-- add student -->
+        <div id="addView" style="display:none" class="card">
+          <h4>Add Student</h4>
+          <form onsubmit="addStudent(event)">
+            <label>Admission No</label><input id="admNo" required />
+            <label>First Name</label><input id="firstName" required />
+            <label>Last Name</label><input id="lastName" required />
+            <label>Class</label><input id="studClass" required />
+            <label>Phone</label><input id="studPhone" />
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <button class="btn primary" type="submit">Save</button>
+              <button class="btn ghost" type="button" onclick="document.getElementById('addView').querySelector('form').reset()">Clear</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- attendance -->
+        <div id="attendanceView" style="display:none" class="card">
+          <h4>Record Attendance</h4>
+          <form onsubmit="recordAttendance(event)">
+            <label>Date</label><input type="date" id="attDate" required />
+            <label>Class</label><input id="attClass" value="Montessori" />
+            <div style="margin:10px 0"><small class="small">Mark present student admission numbers (comma separated)</small></div>
+            <input id="presentList" placeholder="Example: ADM001,ADM002" />
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <button class="btn primary" type="submit">Save Attendance</button>
+            </div>
+          </form>
+          <div id="attHistory" style="margin-top:12px"></div>
+        </div>
+
+        <!-- results -->
+        <div id="resultsView" style="display:none" class="card">
+          <h4>Upload Results</h4>
+          <form onsubmit="saveResult(event)">
+            <label>Admission No</label><input id="resAdm" required />
+            <label>Subject</label><input id="resSub" required />
+            <label>Score</label><input id="resScore" type="number" required />
+            <div style="display:flex;gap:10px;margin-top:8px">
+              <button class="btn primary" type="submit">Save Result</button>
+            </div>
+          </form>
+          <div id="resultsList" style="margin-top:12px"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h3>Gallery</h3>
+    <div class="gallery" aria-label="Gallery">
+      <img src="https://images.unsplash.com/photo-1528211900573-7d6a7b3f5a26?q=80&w=800&auto=format&fit=crop" alt="students" />
+      <img src="https://images.unsplash.com/photo-1520250497591-112f2b6b8f3b?q=80&w=800&auto=format&fit=crop" alt="library" />
+      <img src="https://images.unsplash.com/photo-1485206412256-7013f6a1e0a9?q=80&w=800&auto=format&fit=crop" alt="classroom" />
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h3>Contact & Visit</h3>
+    <div class="split">
+      <div>
+        <div class="card">
+          <p class="small"><strong>Address:</strong> 12 Sunshine Ave, Your City</p>
+          <p class="small"><strong>Phone:</strong> +234 800 000 0000</p>
+          <p class="small"><strong>Email:</strong> info@forteyard.edu.ng</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h4>Send a message</h4>
+          <form onsubmit="alert('Message sent — demo only'); return false;">
+            <label>Name</label><input required />
+            <label>Email</label><input required type="email" />
+            <label>Message</label><textarea required></textarea>
+            <div style="margin-top:8px">
+              <button class="btn primary" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div style="max-width:1100px;margin:0 auto;padding:12px;color:#fff">
+    © <strong>Forte Yard Montessori Primary School</strong> — Demo site by Cubic36ty NG Ltd
+  </div>
+</footer>
+
+<script>
+/* === Simple front-end SMS demo stored in localStorage === */
+const LS_STUD = 'fy_students';
+const LS_ADMS = 'fy_admissions';
+const LS_ATT = 'fy_attendance';
+const LS_RES = 'fy_results';
+
+// Helpers
+function load(key){ try { return JSON.parse(localStorage.getItem(key)||'[]'); } catch(e){ return []; } }
+function save(key, v){ localStorage.setItem(key, JSON.stringify(v)); }
+
+// Seed sample data if empty
+if(!load(LS_STUD).length){
+  save(LS_STUD, [
+    {adm:'ADM001', first:'Ada', last:'Okonkwo', cls:'Montessori', phone:'+2348001'},
+    {adm:'ADM002', first:'Tunde', last:'Adebayo', cls:'Primary 1', phone:'+2348002'}
+  ]);
+}
+
+// Admissions form
+function submitAdmission(e){
+  e.preventDefault();
+  const data = {
+    id: 'APP' + Date.now().toString().slice(-6),
+    child: document.getElementById('childName').value,
+    dob: document.getElementById('dob').value,
+    applyClass: document.getElementById('classSelect').value,
+    guardian: document.getElementById('guardian').value,
+    contact: document.getElementById('phone').value,
+    notes: document.getElementById('notes').value,
+    created: new Date().toISOString()
+  };
+  const apps = load(LS_ADMS);
+  apps.unshift(data);
+  save(LS_ADMS, apps);
+  alert('Application saved (demo). You can view it in console or localStorage.');
+  document.getElementById('admissionForm').reset();
+}
+
+// SMS UI controllers
+function smsShow(view){
+  ['studentsView','addView','attendanceView','resultsView'].forEach(id=>document.getElementById(id).style.display='none');
+  if(view==='students') renderStudents();
+  if(view==='add') { document.getElementById('addView').style.display='block'; }
+  if(view==='attendance') { document.getElementById('attendanceView').style.display='block'; renderAttendance(); }
+  if(view==='results') { document.getElementById('resultsView').style.display='block'; renderResults(); }
+}
+
+// Render students table
+function renderStudents(){
+  const tbody = document.querySelector('#studentsTable tbody');
+  tbody.innerHTML='';
+  const st = load(LS_STUD);
+  st.forEach(s=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${s.adm}</td><td>${s.first} ${s.last}</td><td>${s.cls}</td><td>${s.phone||''}</td>
+      <td><button onclick="deleteStudent('${s.adm}')">Delete</button></td>`;
+    tbody.appendChild(tr);
+  });
+  document.getElementById('studentsView').style.display='block';
+}
+
+// Add student
+function addStudent(e){
+  e.preventDefault();
+  const adm = document.getElementById('admNo').value.trim();
+  const st = load(LS_STUD);
+  if(st.find(s=>s.adm===adm)){ alert('Admission number exists'); return; }
+  const newS = {
+    adm,
+    first: document.getElementById('firstName').value.trim(),
+    last: document.getElementById('lastName').value.trim(),
+    cls: document.getElementById('studClass').value.trim(),
+    phone: document.getElementById('studPhone').value.trim()
+  };
+  st.push(newS); save(LS_STUD, st);
+  alert('Student added (demo)');
+  document.querySelector('#addView form').reset();
+  smsShow('students');
+}
+
+// Delete student
+function deleteStudent(adm){
+  if(!confirm('Delete student '+adm+'?')) return;
+  let st = load(LS_STUD); st = st.filter(s=>s.adm!==adm); save(LS_STUD, st); renderStudents();
+}
+
+// Attendance
+function recordAttendance(e){
+  e.preventDefault();
+  const date = document.getElementById('attDate').value;
+  const cls = document.getElementById('attClass').value;
+  const presentRaw = document.getElementById('presentList').value.trim();
+  const present = presentRaw ? presentRaw.split(',').map(x=>x.trim().toUpperCase()) : [];
+  const att = load(LS_ATT);
+  att.unshift({date, cls, present, recorded: new Date().toISOString()});
+  save(LS_ATT, att);
+  alert('Attendance recorded (demo)');
+  renderAttendance();
+  document.getElementById('presentList').value='';
+}
+
+// Render attendance history
+function renderAttendance(){
+  const hist = load(LS_ATT);
+  const out = document.getElementById('attHistory');
+  out.innerHTML = '<h5 class="small">Attendance History</h5>';
+  if(!hist.length) { out.innerHTML += '<div class="small muted">No records yet</div>'; return; }
+  hist.slice(0,6).forEach(r=>{
+    const d = new Date(r.date).toLocaleDateString();
+    out.innerHTML += `<div style="padding:8px;border-bottom:1px solid #f1f5f9"><strong>${d}</strong> • ${r.cls} • Present: ${r.present.join(', ')}</div>`;
+  });
+}
+
+// Results
+function saveResult(e){
+  e.preventDefault();
+  const res = load(LS_RES);
+  res.unshift({adm:document.getElementById('resAdm').value.trim(), subject:document.getElementById('resSub').value.trim(), score:Number(document.getElementById('resScore').value)});
+  save(LS_RES, res);
+  alert('Result saved (demo)');
+  renderResults();
+  document.getElementById('resAdm').value=''; document.getElementById('resSub').value=''; document.getElementById('resScore').value='';
+}
+
+function renderResults(){
+  const list = load(LS_RES);
+  const el = document.getElementById('resultsList');
+  if(!list.length){ el.innerHTML = '<div class="small muted">No results yet</div>'; return; }
+  el.innerHTML = '<table><thead><tr><th>Adm No</th><th>Subject</th><th>Score</th></tr></thead><tbody>' + list.map(r=>`<tr><td>${r.adm}</td><td>${r.subject}</td><td>${r.score}</td></tr>`).join('') + '</tbody></table>';
+}
+
+// Demo login: simple prompt
+let DEMO_AUTH = false;
+function demoLogin(){
+  const p = prompt('Enter admin password (demo):');
+  if(p==='demo123'){ DEMO_AUTH = true; alert('Admin demo logged in'); smsShow('students'); } else alert('Wrong password');
+}
+
+// Simple helpers
+function resetForm(){ if(confirm('Clear form?')) document.getElementById('admissionForm').reset(); }
+
+// Initialize default view
+smsShow('students');
+</script>
+
+</body>
+</html>
